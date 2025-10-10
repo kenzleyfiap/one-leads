@@ -21,7 +21,7 @@
    git clone https://github.com/kenzleyfiap/one-leads.git
    cd one-leads
 
-2. **Configure o banco de dados em src/main/resources/application.yml:**
+2. **Configure o banco de dados em `src/main/resources/application.yml`:**
      ````
     spring:
       datasource:
@@ -38,7 +38,7 @@
 
 #### **1. Usando imagem publicada no Docker Hub**
 
- * **Certifique-se de que o arquivo <b>docker-compose.yml<b> está configurado assim:**
+ * **Certifique-se de que o arquivo `docker-compose.yml` está configurado assim:**
     ````
     version: '3.8'
     
@@ -73,5 +73,5 @@ docker-compose up -d
 
 ## 📘 **Acessando a aplicação**
 
-1. API estará disponível em: http://localhost:8080
-2. A documentação Swagger pode ser acessada em: http://localhost:8080/ ou  http://localhost:8080/swagger-ui.html
+1. API estará disponível em: `http://localhost:8080`
+2. A documentação Swagger pode ser acessada em: `http://localhost:8080/` ou  `http://localhost:8080/swagger-ui.html`
