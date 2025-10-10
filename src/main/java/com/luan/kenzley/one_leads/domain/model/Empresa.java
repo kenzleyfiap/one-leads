@@ -8,7 +8,7 @@ import java.util.Set;
 @Entity
 public class Empresa {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, unique = true)
@@ -18,6 +18,11 @@ public class Empresa {
     private String nome;
 
     @ManyToMany
+    @JoinTable(
+            name = "empresa_contato",
+            joinColumns = @JoinColumn(name = "empresa_id"),
+            inverseJoinColumns = @JoinColumn(name = "contato_id")
+    )
     private Set<Contato> contatos = new HashSet<>();
 
     public Long getId() {

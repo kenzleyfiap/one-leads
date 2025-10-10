@@ -1,14 +1,14 @@
 package com.luan.kenzley.one_leads.domain.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Contato {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
@@ -20,6 +20,10 @@ public class Contato {
     private String telefone;
 
     private String observacoes;
+
+    @ManyToMany(mappedBy = "contatos")
+    private Set<Empresa> empresas = new HashSet<>();
+
 
     public Long getId() {
         return id;
@@ -59,5 +63,13 @@ public class Contato {
 
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
+    }
+
+    public Set<Empresa> getEmpresas() {
+        return empresas;
+    }
+
+    public void setEmpresas(Set<Empresa> empresas) {
+        this.empresas = empresas;
     }
 }

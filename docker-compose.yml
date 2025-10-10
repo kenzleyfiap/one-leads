@@ -1,12 +1,19 @@
 version: '3.8'
+
 services:
-#  app:
-#    build: .
-#    ports:
-#      - "8080:8080"
-#    depends_on:
-#      - db
-  db:
+  oneleads-api:
+    image: luankenzley/oneleads:1.0
+    ports:
+      - "8080:8080"
+    depends_on:
+      - oneleads-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://oneleads-db:5432/leads
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: pass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
+
+  oneleads-db:
     image: postgres
     environment:
       POSTGRES_DB: leads

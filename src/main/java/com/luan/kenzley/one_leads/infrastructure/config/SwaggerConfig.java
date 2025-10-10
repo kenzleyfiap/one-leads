@@ -27,7 +27,7 @@ public class SwaggerConfig {
     public GroupedOpenApi customImplementation() {
         return GroupedOpenApi.builder()
                 .group("one-leads")
-                .packagesToScan("com.luan.kenzley.one_leads.controller")
+                .packagesToScan("com.luan.kenzley.one_leads.interfaces.controller")
                 .build();
     }
 }

@@ -1,8 +1,8 @@
 package com.luan.kenzley.one_leads.application.validator.impl;
 
-import com.luan.kenzley.one_leads.dto.ContatoDTO;
 import com.luan.kenzley.one_leads.application.validator.ContatoValidator;
 import com.luan.kenzley.one_leads.application.validator.rule.contato.ContatoValidationRule;
+import com.luan.kenzley.one_leads.interfaces.dto.contato.ContatoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

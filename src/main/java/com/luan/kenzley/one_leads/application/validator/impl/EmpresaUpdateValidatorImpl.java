@@ -1,8 +1,8 @@
 package com.luan.kenzley.one_leads.application.validator.impl;
 
-import com.luan.kenzley.one_leads.dto.EmpresaUpdateDTO;
 import com.luan.kenzley.one_leads.application.validator.EmpresaUpdateValidator;
 import com.luan.kenzley.one_leads.application.validator.rule.empresa.EmpresaUpdateValidationRule;
+import com.luan.kenzley.one_leads.interfaces.dto.empresa.EmpresaUpdateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
